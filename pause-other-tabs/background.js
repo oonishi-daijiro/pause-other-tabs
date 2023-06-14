@@ -6,7 +6,7 @@ chrome.tabs.onActivated.addListener(tab => {
   currentTabID = tab.tabId
   currentStat = 'play'
   chrome.action.setIcon({
-    path: './icon/pause/16.png'
+    path: './icon/pause/64.png'
   })
 })
 
@@ -15,7 +15,7 @@ chrome.action.onClicked.addListener(async () => {
     active: true,
     lastFocusedWindow: true
   }))[0].id
-  
+
   switch (currentStat) {
     case 'play':
       (await chrome.tabs.query({}))
@@ -27,12 +27,12 @@ chrome.action.onClicked.addListener(async () => {
               tabId: tab.id,
               allFrames: true
             },
-            files: ['./injections/pause-all-videos.js']
+            files: ['./injections/pause-all-media.js']
           })
         })
       currentStat = 'pause'
       chrome.action.setIcon({
-        path: './icon/play/16.png'
+        path: './icon/play/64.png'
       })
       break
 
@@ -43,11 +43,11 @@ chrome.action.onClicked.addListener(async () => {
             tabId: tab.id,
             allFrames: true
           },
-          files: ['./injections/play-all-videos.js']
+          files: ['./injections/play-all-media.js']
         })
       })
       chrome.action.setIcon({
-        path: './icon/pause/16.png'
+        path: './icon/pause/64.png'
       })
       tabsPaused = []
       currentStat = 'play'
