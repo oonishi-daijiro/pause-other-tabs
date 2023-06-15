@@ -1,8 +1,8 @@
-pauseTags(['video', 'audio'])
+pauseTags('video', 'audio')
 
 
-function pauseTags() {
-  Array.from(arguments).forEach(arg => {
+function pauseTags(...tags) {
+  Array.from(tags).forEach(arg => {
     document.querySelectorAll(arg).forEach(element => {
       if (typeof element.pause === 'function') {
         element.pause()
@@ -10,4 +10,3 @@ function pauseTags() {
     })
   })
 }
-

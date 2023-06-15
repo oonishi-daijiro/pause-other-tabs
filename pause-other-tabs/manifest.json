@@ -1,6 +1,6 @@
 {
   "name": "Pause other tabs",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 3,
 
   "description": "現在のタブ以外の再生を停止します",
@@ -13,8 +13,7 @@
 
   "host_permissions": ["http://*/*", "https://*/*"],
   "permissions": ["scripting"],
-
-  "action": {},
+  "action":{},
   "background": {
     "service_worker": "./background.js"
   },
