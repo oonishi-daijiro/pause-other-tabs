@@ -10,12 +10,8 @@
     "32": "./icon/pause/32.png",
     "64": "./icon/pause/64.png"
   },
-<<<<<<< HEAD
 
   "host_permissions": ["http://*/*", "https://*/*"],
-=======
-"host_permissions": ["http://*/*", "https://*/*"],
->>>>>>> 15024e085c4c28791db6f25d1f2851ba108d7931
   "permissions": ["scripting"],
 
   "action": {},
