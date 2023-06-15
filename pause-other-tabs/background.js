@@ -6,7 +6,7 @@ chrome.tabs.onActivated.addListener(tab => {
   currentTabID = tab.tabId
   currentStat = 'play'
   chrome.action.setIcon({
-    path: './icon/pause/16.png'
+    path: './icon/pause/64.png'
   })
 })
 
@@ -32,7 +32,7 @@ chrome.action.onClicked.addListener(async () => {
         })
       currentStat = 'pause'
       chrome.action.setIcon({
-        path: './icon/play/16.png'
+        path: './icon/play/64.png'
       })
       break
 
@@ -47,7 +47,7 @@ chrome.action.onClicked.addListener(async () => {
         })
       })
       chrome.action.setIcon({
-        path: './icon/pause/16.png'
+        path: './icon/pause/64.png'
       })
       tabsPaused = []
       currentStat = 'play'
