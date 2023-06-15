@@ -11,13 +11,6 @@
     "64": "./icon/pause/64.png"
   },
 
-  "content_scripts": [
-    {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["./content.js"]
-    }
-  ],
-
   "host_permissions": ["http://*/*", "https://*/*"],
   "permissions": ["scripting"],
 

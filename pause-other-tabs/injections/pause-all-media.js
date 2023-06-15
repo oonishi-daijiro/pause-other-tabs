@@ -1,15 +1,13 @@
-document.querySelectorAll('video').forEach(video => {
-  video.pause()
-})
+pauseTags(['video', 'audio'])
 
-console.log(getMultipleQueries(['video', 'audio']))
 
-function getMultipleQueries(queryKeys) {
-  const queries = []
-  queryKeys.forEach(key => {
-    queries.push(Array.from(document.querySelectorAll(key)))
+function pauseTags() {
+  Array.from(arguments).forEach(arg => {
+    document.querySelectorAll(arg).forEach(element => {
+      if (typeof element.pause === 'function') {
+        element.pause()
+      }
+    })
   })
-  console.log(queries)
-  queries.flat(1)
-  return queries
 }
+
