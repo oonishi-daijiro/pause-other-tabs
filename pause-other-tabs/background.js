@@ -19,7 +19,7 @@ chrome.action.onClicked.addListener(async () => {
   switch (currentStat) {
     case 'play':
       (await chrome.tabs.query({}))
-      .filter(tab => tab.audible && tab.id !== currentTabID)
+        .filter(tab => tab.audible && tab.id !== currentTabID)
         .forEach(tab => {
           tabsPaused.push(tab)
           chrome.scripting.executeScript({

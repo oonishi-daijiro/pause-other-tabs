@@ -5,15 +5,12 @@
 
   "description": "現在のタブ以外の再生を停止します",
   "icons": {
-    "16": "./icon/pause/16.png",
-    "24": "./icon/pause/24.png",
-    "32": "./icon/pause/32.png",
     "64": "./icon/pause/64.png"
   },
 
   "host_permissions": ["http://*/*", "https://*/*"],
   "permissions": ["scripting"],
-  "action":{},
+  "action": {},
   "background": {
     "service_worker": "./background.js"
   },
